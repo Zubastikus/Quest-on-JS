@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quest</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container doors" style="margin-top: 100px; display: ;">
+	<img class="door1" src="door.png" style="height: 400px; margin-left: 150px;">
+	<img class="ml-5 door2" src="door2.png" style="height: 400px;">
+	<img class="ml-5 door3" src="door3.png" style="height: 400px;">
+</div>
+<div style="background-image: url(bg.jpg); height: 755px; background-size: 100% 100%; display: none;" class="Hogwarts">
+	<div>
+		<h3 class="text-white">Помоги Гарри найти ЕГО вещи, он без них не выживет :(</h3>
+		<p class="text-white">Score: <output name="score_1" class="score_1">0</output></p>
+		<button type="button" class="btn btn-secondary btn_exit_1 px-2">Exit</button>
+	</div>
+	<img src="gun.png" class="object1_1" style="height: 80px; margin-top: 490px; margin-left: 60px; position: absolute;">
+	<img src="mantiya.png" class="object1_2" style="height: 80px; margin-top: 500px; margin-left: 390px; position: absolute;">
+	<img src="metla.png" class="object1_3" style="height: 80px; margin-top: 400px; margin-left: 590px; position: absolute;">
+	<img src="palochka.png" class="object1_4" style="height: 80px; margin-top: 550px; margin-left: 970px; position: absolute;">
+	<img src="ring.png" class="object1_5" style="height: 40px; margin-top: 140px; margin-left: 920px; position: absolute;">
+</div>
+<div style="background-image: url(bg_2.jpg); height: 755px; background-size: 100% 100%; display: none;" class="Simpsons">
+	<div>
+		<h3 class="">Если не хочешь чтоб Симпсоны заканчивались, БЫСТРО НАЙДИ ИХ ВЕЩИ (даже если они тебя уже достали и им стоит закончится)</h3>
+		<p class="">Score: <output name="score_2" class="score_2">0</output></p>
+		<button type="button" class="btn btn-secondary btn_exit_2 px-2">Exit</button>
+	</div>
+	<img src="donut.png" class="object2_1" style="height: 60px; margin-top: 75px; margin-left: 205px; position: absolute;">
+	<img src="gas_mask.png" class="object2_2" style="height: 80px; margin-top: 240px; margin-left: 180px; position: absolute;">
+	<img src="skateboard.jpg" class="object2_3" style="height: 80px; margin-top: -15px; margin-left: 660px; position: absolute;">
+	<img src="saxophone3.png" class="object2_4" style="height: 80px; margin-top: 250px; margin-left: 1015px; position: absolute;">
+	<img src="estus2.png" class="object2_5" style="height: 40px; margin-top: 0px; margin-left: 1250px; position: absolute;">
+</div>
+
+<script type="text/javascript">
+	let score_1 = 0
+	let score_2 = 0
+
+	document.querySelector(".door1").onclick = function(){
+		alert("Welcome to Hogwarts")
+		document.querySelector(".doors").style.display = "none"
+		document.querySelector(".Hogwarts").style.display = "block"
+	}
+	document.querySelector(".btn_exit_1").onclick = function(){
+		document.querySelector(".Hogwarts").style.display = "none"
+		document.querySelector(".doors").style.display = "block"
+	}
+
+	document.querySelector(".object1_1").onclick = function(){
+	}
+	document.querySelector(".object1_2").onclick = function(){
+		document.querySelector(".object1_2").style.display = "none"
+		score_1 = score_1 + 1;
+		document.querySelector(".score_1").innerHTML = score_1
+	}
+	document.querySelector(".object1_3").onclick = function(){
+		document.querySelector(".object1_3").style.display = "none"
+		score_1 = score_1 + 1;
+		document.querySelector(".score_1").innerHTML = score_1
+	}
+	document.querySelector(".object1_4").onclick = function(){
+		document.querySelector(".object1_4").style.display = "none"
+		score_1 = score_1 + 1;
+		document.querySelector(".score_1").innerHTML = score_1
+	}
+	document.querySelector(".object1_5").onclick = function(){	
+	}
+
+	document.querySelector(".door2").onclick = function(){
+		alert("Welcome to Springfield")
+		document.querySelector(".doors").style.display = "none"
+		document.querySelector(".Simpsons").style.display = "block"
+	}
+	document.querySelector(".btn_exit_2").onclick = function(){
+		document.querySelector(".Simpsons").style.display = "none"
+		document.querySelector(".doors").style.display = "block"
+	}
+
+	document.querySelector(".object2_1").onclick = function(){
+		document.querySelector(".object2_1").style.display = "none"
+		score_2 = score_2 + 1;
+		document.querySelector(".score_2").innerHTML = score_2
+	}
+	document.querySelector(".object2_2").onclick = function(){
+	}
+	document.querySelector(".object2_3").onclick = function(){
+		document.querySelector(".object2_3").style.display = "none"
+		score_2 = score_2 + 1;
+		document.querySelector(".score_2").innerHTML = score_2
+	}
+	document.querySelector(".object2_4").onclick = function(){
+		document.querySelector(".object2_4").style.display = "none"
+		score_2 = score_2 + 1;
+		document.querySelector(".score_2").innerHTML = score_2
+	}
+	document.querySelector(".object2_5").onclick = function(){	
+	}
+</script>
+</body>
+</html>
